@@ -194,7 +194,8 @@ spanTwi:hover {
   justify-content: center;
 }
 .bannerImage {
-  max-width: 1000px;
+  /* 有繼承到父元素寬度 */
+  /* width: 1000px; */
   height: 350px;
   /* 用div以外包的標籤會無效果 */
   background-image: url(./img/banner.png);
@@ -203,9 +204,10 @@ spanTwi:hover {
 .bannerBox {
   position: absolute;
   background-color: black;
-  max-width: 1000px;
+  /* 沒有寬度就不見 沒有繼承wrap父元素寬度 */
+  width: 1000px;
   height: 160px;
-  /* 可以絕對定位+flex去置中 */
+  /* 可以用絕對定位+flex去置中 非只能用絕對定位去推  */
   /* top: 100px; */
   /* 顏色變透明 需注意上下階層 */
   opacity: 0.5;
@@ -237,7 +239,8 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 25px 20px;
-  max-width: 260px;
+  /* 不能用 max-width */
+  width: 260px;
   justify-content: space-between;
   align-items: center;
   /* -x +x 軸  */
@@ -258,7 +261,8 @@ h2 {
   font-size: 25px;
 }
 table {
-  max-width: 800px;
+  /* 不能用 max-width */
+  width: 800px;
   margin-bottom: 60px;
 }
 table td,
@@ -295,14 +299,14 @@ h4 {
   padding: 5px;
 }
 textarea {
-  /* 自適應max-width */
+  /* 自適應 不用max-width */
   width: 500px;
   height: 250px;
 }
 .messageInfor {
   display: flex;
   flex-direction: column;
-    /* 自適應max-width */
+  /* 自適應 不用max-width */
   width: 500px;
   color: white;
   font-weight: bold;
@@ -316,7 +320,7 @@ textarea {
   padding-bottom: 5px;
 }
 .messageInfor button {
-  max-width: 70px;
+  width: 70px;
   font-size: 15px;
   position: absolute;
   bottom: 30px;
@@ -344,8 +348,8 @@ footer ul {
   justify-content: space-between;
 }
 
-.goTop{
-max-width: 40px;
+.goTop {
+  width: 40px;
   height: 35px;
   background: #00cc99;
   -webkit-clip-path: polygon(
@@ -357,11 +361,11 @@ max-width: 40px;
     0% 50%
   );
   position: fixed;
-right: 10px;
-bottom: 10px;
-color: white;
-text-align: center;
-font-weight: bold;
-cursor: pointer;
-border: none;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }
