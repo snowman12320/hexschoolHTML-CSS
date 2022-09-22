@@ -132,7 +132,7 @@ table {
   /* outline: 1px solid black; */
 }
 .wrap {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   font-family: "微軟正黑體";
 }
@@ -170,7 +170,7 @@ spanTwi:hover {
   font-size: 15px;
 }
 .menu {
-  width: 250px;
+  max-width: 250px;
   display: flex;
   justify-content: space-around;
 }
@@ -194,7 +194,7 @@ spanTwi:hover {
   justify-content: center;
 }
 .bannerImage {
-  width: 1000px;
+  max-width: 1000px;
   height: 350px;
   /* 用div以外包的標籤會無效果 */
   background-image: url(./img/banner.png);
@@ -203,7 +203,7 @@ spanTwi:hover {
 .bannerBox {
   position: absolute;
   background-color: black;
-  width: 1000px;
+  max-width: 1000px;
   height: 160px;
   /* 可以絕對定位+flex去置中 */
   /* top: 100px; */
@@ -237,7 +237,7 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 25px 20px;
-  width: 260px;
+  max-width: 260px;
   justify-content: space-between;
   align-items: center;
   /* -x +x 軸  */
@@ -258,7 +258,7 @@ h2 {
   font-size: 25px;
 }
 table {
-  width: 800px;
+  max-width: 800px;
   margin-bottom: 60px;
 }
 table td,
@@ -278,7 +278,7 @@ table tr th {
 
 .greenBox {
   position: relative;
-  width: 1000px;
+  max-width: 1000px;
   height: 400px;
   padding-top: 35px;
   background: linear-gradient(#00654c, #009875);
@@ -295,12 +295,14 @@ h4 {
   padding: 5px;
 }
 textarea {
+  /* 自適應max-width */
   width: 500px;
   height: 250px;
 }
 .messageInfor {
   display: flex;
   flex-direction: column;
+    /* 自適應max-width */
   width: 500px;
   color: white;
   font-weight: bold;
@@ -314,7 +316,7 @@ textarea {
   padding-bottom: 5px;
 }
 .messageInfor button {
-  width: 70px;
+  max-width: 70px;
   font-size: 15px;
   position: absolute;
   bottom: 30px;
@@ -343,7 +345,7 @@ footer ul {
 }
 
 .goTop{
-width: 40px;
+max-width: 40px;
   height: 35px;
   background: #00cc99;
   -webkit-clip-path: polygon(
