@@ -298,7 +298,7 @@ textarea {
   width: 500px;
   height: 250px;
 }
-.infor {
+.messageInfor {
   display: flex;
   flex-direction: column;
   width: 500px;
@@ -306,14 +306,14 @@ textarea {
   font-weight: bold;
   font-size: 16px;
 }
-.infor input {
+.messageInfor input {
   margin-bottom: 20px;
   height: 30px;
 }
-.infor label {
+.messageInfor label {
   padding-bottom: 5px;
 }
-.infor button {
+.messageInfor button {
   width: 70px;
   font-size: 15px;
   position: absolute;
@@ -325,7 +325,7 @@ textarea {
   border: none;
   padding: 7px 10px;
 }
-.infor button:hover {
+.messageInfor button:hover {
   cursor: pointer;
   background-color: white;
   color: #00cc99;
