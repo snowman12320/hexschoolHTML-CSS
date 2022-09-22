@@ -1,0 +1,365 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  /* outline: 1px solid black; */
+}
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: "微軟正黑體";
+}
+a {
+  text-decoration: none;
+}
+
+.share {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: end;
+  padding: 6px 15px;
+}
+spanFace {
+  color: #667aad;
+}
+spanTwi {
+  color: #b1daf2;
+}
+spanFace:hover {
+  color: #b1daf2;
+  cursor: pointer;
+}
+spanTwi:hover {
+  color: #667aad;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 22px;
+  color: #9ce5cd;
+  font-weight: bold;
+  font-size: 15px;
+}
+.menu {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+.menu li {
+  padding: 16px 15px;
+}
+.menu li:hover {
+  border-bottom: #00cc99 4px solid;
+  cursor: pointer;
+}
+.menu a {
+  text-decoration: none;
+  color: #9ce5cd;
+  /* a標籤權重1分 藍色會被蓋掉 .menu a的10+1分顏色蓋 */
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bannerImage {
+  width: 1000px;
+  height: 350px;
+  /* 用div以外包的標籤會無效果 */
+  background-image: url(./img/banner.png);
+  background-repeat: no-repeat;
+}
+.bannerBox {
+  position: absolute;
+  background-color: black;
+  width: 1000px;
+  height: 160px;
+  /* 可以絕對定位+flex去置中 */
+  /* top: 100px; */
+  /* 顏色變透明 需注意上下階層 */
+  opacity: 0.5;
+}
+.bannerInfor {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  /* top: 130px; */
+  padding-left: 30px;
+}
+.bannerInfor h1 {
+  padding-bottom: 14px;
+}
+
+.triBox {
+  display: flex;
+  margin: 60px 40px;
+  grid-gap: 30px;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+.img_content {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  width: 260px;
+  justify-content: space-between;
+  align-items: center;
+  /* -x +x 軸  */
+  box-shadow: -1px 1px #dddd;
+  /* 0x 3y 3px擴散 */
+  box-shadow: 0 3px 3px #dddd;
+  border-radius: 5px;
+}
+
+.tableClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tableClass h3 {
+  font-weight: bold;
+  padding-bottom: 35px;
+  font-size: 25px;
+}
+table {
+  width: 800px;
+  margin-bottom: 60px;
+}
+table td,
+table tr th {
+  padding: 15px 25px;
+  border-top: 1px solid #dddd;
+  border-bottom: 1px solid #dddd;
+  text-align: left;
+}
+table tr th {
+  font-weight: bold;
+  background-color: #f7f7f7;
+}
+.fontColor {
+  color: red;
+}
+
+.greenBox {
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  padding-top: 35px;
+  background: linear-gradient(#00654c, #009875);
+}
+.message {
+  display: flex;
+  padding: 30px 20px;
+  grid-gap: 40px;
+}
+h4 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+}
+textarea {
+  width: 500px;
+  height: 250px;
+}
+.infor {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+.infor input {
+  margin-bottom: 20px;
+  height: 30px;
+}
+.infor label {
+  padding-bottom: 5px;
+}
+.infor button {
+  width: 70px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  /* border-radius: 5%; */
+  color: white;
+  background-color: #00cc99;
+  border: none;
+  padding: 7px 10px;
+}
+.infor button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #00cc99;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goTop{
+width: 40px;
+  height: 35px;
+  background: #00cc99;
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  position: fixed;
+right: 10px;
+bottom: 10px;
+color: white;
+text-align: center;
+font-weight: bold;
+cursor: pointer;
+border: none;
+}
