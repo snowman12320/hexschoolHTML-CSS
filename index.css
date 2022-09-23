@@ -165,8 +165,8 @@ spanTwi:hover {
   spanTwi {
     display: none;
   }
-  .share  {
-    width: 60px;
+  .share {
+    /* 不用width 會自適應父層 */
     height: 30px;
     justify-content: center;
     margin: 0 auto;
@@ -206,7 +206,7 @@ spanTwi:hover {
     flex-direction: column;
     padding: 0px 0px;
   }
-  .navbar a img{
+  .navbar a img {
     display: block;
     margin: 0 auto;
     /* width: 100%; */
@@ -217,7 +217,7 @@ spanTwi:hover {
   }
   .menu li {
     text-align: center;
-    display: block;
+    /* display: block; */
     padding: 10px 0px;
     font-size: 20px;
     width: 50%;
@@ -314,7 +314,7 @@ h2 {
   }
 }
 @media (max-width: 500px) {
-    .img_content {
+  .img_content {
     width: 90%;
   }
 }
@@ -451,7 +451,7 @@ footer ul {
     flex-direction: column;
     align-items: center;
   }
-  footer li{
+  footer li {
     margin: 5px 0px;
   }
 }
