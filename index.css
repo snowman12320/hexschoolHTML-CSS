@@ -187,12 +187,10 @@ spanTwi:hover {
   font-size: 15px;
 }
 .menu {
-  width: 250px;
   display: flex;
-  justify-content: space-around;
 }
 .menu li {
-  padding: 16px 0px;
+  padding: 16px 10px;
 }
 .menu li:hover {
   border-bottom: #00cc99 4px solid;
@@ -206,19 +204,23 @@ spanTwi:hover {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
+    padding: 0px 0px;
   }
-  .navbar img {
-    width: 350px;
+  .navbar a img{
+    display: block;
+    margin: 0 auto;
+    /* width: 100%; */
   }
   .menu {
+    width: 100%;
     flex-wrap: wrap;
-    /* display: block; */
-    /* text-align: center; */
   }
   .menu li {
-    padding: 10px 85px;
+    text-align: center;
+    display: block;
+    padding: 10px 0px;
     font-size: 20px;
+    width: 50%;
   }
 }
 
@@ -298,14 +300,22 @@ h2 {
 @media (max-width: 768px) {
   .triBox {
     flex-direction: column;
-    /* margin: 0px 0px; */
+    align-items: center;
   }
   .img_content {
-    width: 90%;
+    /* 90%改30% 因美觀 */
+    width: 35%;
+    /* 也可用來置中 */
+    /* margin: 0 auto; */
   }
   .triBox p,
   .triBox ul {
     font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+    .img_content {
+    width: 90%;
   }
 }
 
