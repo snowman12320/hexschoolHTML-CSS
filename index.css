@@ -160,6 +160,23 @@ spanTwi:hover {
   color: #667aad;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  spanFace,
+  spanTwi {
+    display: none;
+  }
+  .share  {
+    width: 60px;
+    height: 30px;
+    justify-content: center;
+    margin: 0 auto;
+    grid-gap: 5px;
+  }
+  .share img {
+    margin: 0px 20px;
+    width: 30px;
+  }
+}
 
 .navbar {
   display: flex;
@@ -170,12 +187,12 @@ spanTwi:hover {
   font-size: 15px;
 }
 .menu {
-  max-width: 250px;
+  width: 250px;
   display: flex;
   justify-content: space-around;
 }
 .menu li {
-  padding: 16px 15px;
+  padding: 16px 0px;
 }
 .menu li:hover {
   border-bottom: #00cc99 4px solid;
@@ -185,6 +202,24 @@ spanTwi:hover {
   text-decoration: none;
   color: #9ce5cd;
   /* a標籤權重1分 藍色會被蓋掉 .menu a的10+1分顏色蓋 */
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar img {
+    width: 350px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    /* display: block; */
+    /* text-align: center; */
+  }
+  .menu li {
+    padding: 10px 85px;
+    font-size: 20px;
+  }
 }
 
 .banner {
@@ -205,7 +240,7 @@ spanTwi:hover {
   position: absolute;
   background-color: black;
   /* 沒有寬度就不見 沒有繼承wrap父元素寬度 */
-  width: 1000px;
+  width: 100%;
   height: 160px;
   /* 可以用絕對定位+flex去置中 非只能用絕對定位去推  */
   /* top: 100px; */
@@ -221,6 +256,11 @@ spanTwi:hover {
 }
 .bannerInfor h1 {
   padding-bottom: 14px;
+}
+@media (max-width: 768px) {
+  .banner {
+    display: none;
+  }
 }
 
 .triBox {
@@ -240,7 +280,7 @@ h2 {
   flex-direction: column;
   padding: 25px 20px;
   /* 不能用 max-width */
-  width: 260px;
+  width: 30%;
   justify-content: space-between;
   align-items: center;
   /* -x +x 軸  */
@@ -248,6 +288,25 @@ h2 {
   /* 0x 3y 3px擴散 */
   box-shadow: 0 3px 3px #dddd;
   border-radius: 5px;
+}
+@media (max-width: 1000px) {
+  .triBox {
+    grid-gap: 10px;
+    margin: 60px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .triBox {
+    flex-direction: column;
+    /* margin: 0px 0px; */
+  }
+  .img_content {
+    width: 90%;
+  }
+  .triBox p,
+  .triBox ul {
+    font-size: 20px;
+  }
 }
 
 .tableClass {
@@ -262,7 +321,7 @@ h2 {
 }
 table {
   /* 不能用 max-width */
-  width: 800px;
+  width: 80%;
   margin-bottom: 60px;
 }
 table td,
@@ -278,6 +337,21 @@ table tr th {
 }
 .fontColor {
   color: red;
+}
+@media (max-width: 1000px) {
+  table {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  table td,
+  table tr th {
+    padding: 5px 3px;
+    text-align: center;
+  }
+  .tableRwd {
+    display: none;
+  }
 }
 
 .greenBox {
@@ -336,6 +410,21 @@ textarea {
   background-color: white;
   color: #00cc99;
 }
+@media (max-width: 768px) {
+  .message {
+    flex-direction: column;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+  .messageInfor {
+    width: 100%;
+  }
+  .greenBox {
+    height: 550px;
+  }
+}
 
 footer {
   display: flex;
@@ -346,6 +435,15 @@ footer ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer li{
+    margin: 5px 0px;
+  }
 }
 
 .goTop {
