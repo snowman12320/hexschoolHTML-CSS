@@ -146,23 +146,23 @@ a {
   justify-content: end;
   padding: 6px 15px;
 }
-spanFace {
+.spanFace {
   color: #667aad;
 }
 spanTwi {
   color: #b1daf2;
 }
-spanFace:hover {
+.spanFace:hover {
   color: #b1daf2;
   cursor: pointer;
 }
-spanTwi:hover {
+.spanTwi:hover {
   color: #667aad;
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  spanFace,
-  spanTwi {
+  .spanFace,
+  .spanTwi {
     display: none;
   }
   .share {
@@ -291,6 +291,10 @@ h2 {
   box-shadow: 0 3px 3px #dddd;
   border-radius: 5px;
 }
+.img_content li{
+  /* 列表圓點 */
+  list-style:disc
+}
 @media (max-width: 1000px) {
   .triBox {
     grid-gap: 10px;
@@ -366,8 +370,7 @@ table tr th {
 
 .greenBox {
   position: relative;
-  max-width: 1000px;
-  height: 400px;
+  /* max-width: 1000px; */
   padding-top: 35px;
   background: linear-gradient(#00654c, #009875);
 }
@@ -406,9 +409,8 @@ textarea {
 .messageInfor button {
   width: 70px;
   font-size: 15px;
-  position: absolute;
-  bottom: 30px;
-  right: 20px;
+  /* align-self獨立垂直靠底end */
+  align-self: end;
   /* border-radius: 5%; */
   color: white;
   background-color: #00cc99;
@@ -430,9 +432,6 @@ textarea {
   }
   .messageInfor {
     width: 100%;
-  }
-  .greenBox {
-    height: 550px;
   }
 }
 
