@@ -195,6 +195,8 @@ spanTwi {
 .menu li:hover {
   border-bottom: #00cc99 4px solid;
   cursor: pointer;
+  /* hover不是media會覆蓋 是多推4px */
+  padding-bottom: 4px;
 }
 .menu a {
   text-decoration: none;
@@ -261,7 +263,19 @@ spanTwi {
 }
 @media (max-width: 768px) {
   .banner {
-    display: none;
+    /* display: none; */
+    background-color: black;
+  }
+  .bannerImage {
+    background-image: url(./img/bannerSmall.png);
+    background-position: center center;
+  }
+  .bannerBox {
+    max-width: 768px;
+    align-self: center;
+  }
+  .bannerInfor {
+    align-self: center;
   }
 }
 
@@ -291,9 +305,9 @@ h2 {
   box-shadow: 0 3px 3px #dddd;
   border-radius: 5px;
 }
-.img_content li{
+.img_content li {
   /* 列表圓點 */
-  list-style:disc
+  list-style: disc;
 }
 @media (max-width: 1000px) {
   .triBox {
