@@ -268,7 +268,9 @@ spanTwi {
   }
   .bannerImage {
     background-image: url(./img/bannerSmall.png);
+    /* 背景置中 */
     background-position: center center;
+    background-size: cover;
   }
   .bannerBox {
     max-width: 768px;
