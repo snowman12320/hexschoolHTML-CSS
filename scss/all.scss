@@ -1,27 +1,12 @@
-// @import "reset";
-@import "color";
+@import "base/reset"; //基礎/歸一
+@import "base/typography"; //排版規則
+@import "pages/index"; //分頁/主頁
+@import "utils/variables";//通用/變數
+@import "layout/navigation";//佈局/導覽
+@import "layout/content";//佈局/導覽
+@import "layout/table";//佈局/導覽
+
 @import "mix";
-@import "module";
 @import "grid";
 
-.wrap {
-  max-width: 1000px;
-  background-color: #000;
-  a {
-    color: $fb_black;
-    .share {
-      background-color: $fb_black;
-    }
-  }
-}
 
-.box {
-  @include hide_text;
-  @include circle(5px, #000);
-}
-
-.button_orange {
-  @include pad() {
-    width: 500px;
-  }
-}

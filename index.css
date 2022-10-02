@@ -150,17 +150,17 @@ a {
   padding: 6px 15px;
 }
 .spanFace {
-  color: #667aad;
+  color: $facebook;
 }
 .spanTwi {
-  color: #b1daf2;
+  color: $twitter;
 }
 .spanFace:hover {
-  color: #b1daf2;
+  color: $facebook;
   cursor: pointer;
 }
 .spanTwi:hover {
-  color: #667aad;
+  color: $twitter;
   cursor: pointer;
 }
 

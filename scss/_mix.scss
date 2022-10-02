@@ -4,10 +4,15 @@
     width: $size;
     background-color: $background;
 }
-
 @mixin hide_text {
     text-indent: 110%;
     word-spacing: nowrap;
     overflow: hidden;
+}
+@mixin shadow {
+  /* -x +x 軸  */
+  box-shadow: -1px 1px #dddd;
+  /* 0x 3y 3px擴散 */
+  box-shadow: 0 3px 3px #dddd;
 }
 

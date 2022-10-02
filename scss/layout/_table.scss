@@ -1,0 +1,30 @@
+.table_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.table_wrap h3 {
+  font-weight: bold;
+  padding-bottom: 35px;
+  font-size: 25px;
+}
+.table_content {
+  /* 不能用 max-width */
+  /* width: 800px; */
+  width: 90%;
+  margin-bottom: 60px;
+}
+.table_content td,
+.table_content tr th {
+  padding: 15px 25px;
+  border-top: 1px solid #dddd;
+  border-bottom: 1px solid #dddd;
+  text-align: left;
+}
+.table_content tr th {
+  font-weight: bold;
+  background-color: #f7f7f7;
+}
+.fontColor {
+  color: red;
+}

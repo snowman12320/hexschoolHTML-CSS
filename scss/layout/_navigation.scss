@@ -1,0 +1,26 @@
+@import "../utils/variables";//通用/變數
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 22px;
+  color: $hexschool;
+  font-weight: bold; 
+  font-size: 15px;
+  .menu {
+    max-width: 250px;
+    display: flex;
+    justify-content: space-around;
+    a {
+      display: block;
+      padding: 16px 15px;
+      text-decoration: none;
+      color: #9ce5cd;
+      /* a標籤權重1分 藍色會被蓋掉 .menu a的10+1分顏色蓋 */
+    }
+    a:hover {
+        border-bottom: #00cc99 4px solid;
+        cursor: pointer;
+      }
+  }
+}

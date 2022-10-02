@@ -1,0 +1,52 @@
+@import "../utils/variables";
+@import "../mix";
+
+.share {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: end;
+  padding: 6px 15px;
+}
+.spanFace {
+  color: $facebook;
+}
+.spanTwi {
+  color: $twitter;
+}
+.spanFace:hover {
+  color: $facebook;
+  cursor: pointer;
+}
+.spanTwi:hover {
+  color: $twitter;
+  cursor: pointer;
+}
+
+.triBox {
+  display: flex;
+  margin: 60px 40px;
+  grid-gap: 30px;
+}
+.img_content h2 {
+  /* 改 tac  */
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+.img_content {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  /* 不能用 max-width */
+  /* width: 260px; */
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  @include shadow;
+}
+.tribox_jqlist {
+  list-style: disc;
+}
