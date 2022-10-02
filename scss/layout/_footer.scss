@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}
+.footer li a:hover{
+  color: red;
+  font-weight: bold;
+}

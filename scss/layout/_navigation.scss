@@ -1,11 +1,12 @@
-@import "../utils/variables";//通用/變數
+@import "../utils/variables";
+@import "../layout/grid";
 
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 0px 22px;
   color: $hexschool;
-  font-weight: bold; 
+  font-weight: bold;
   font-size: 15px;
   .menu {
     max-width: 250px;
@@ -13,14 +14,25 @@
     justify-content: space-around;
     a {
       display: block;
-      padding: 16px 15px;
+      height: auto;
+      padding: 15px;
       text-decoration: none;
       color: #9ce5cd;
       /* a標籤權重1分 藍色會被蓋掉 .menu a的10+1分顏色蓋 */
     }
     a:hover {
-        border-bottom: #00cc99 4px solid;
-        cursor: pointer;
-      }
+      box-sizing: border-box;
+      border-bottom: #00cc99 4px solid;
+      cursor: pointer;
+    }
+  }
+}
+@include pad() {
+  .navbar {
+    img {
+      // border: #00cc99 10px solid;
+      // clip-path: inset(0px 130px 0px 30px round 20px);
+      // margin-right: -100px;
+    }
   }
 }

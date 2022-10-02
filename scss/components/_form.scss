@@ -1,0 +1,48 @@
+.message {
+  display: flex;
+  padding: 30px 20px;
+  grid-gap: 40px;
+}
+textarea {
+  /* 自適應 不用max-width */
+  /* width: 500px; */
+  width: 50%;
+  /* 高度不寫死 適應旁邊 */
+  height: auto;
+}
+.messageInfor {
+  display: flex;
+  flex-direction: column;
+  /* 自適應 不用max-width */
+  /* width: 500px; */
+  width: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  input {
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 2px;
+    border-color: #ccc;
+  }
+  input:focus{
+    border-color: #ccc;
+  }
+  label {
+    padding-bottom: 5px;
+  }
+  button {
+    font-size: 15px;
+    color: white;
+    background-color: #00cc99;
+    border: none;
+    padding: 7px 20px;
+    width: 20%;
+    align-self: flex-end;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #00cc99;
+  }
+}

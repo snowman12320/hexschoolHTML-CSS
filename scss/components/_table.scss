@@ -1,3 +1,5 @@
+@import "../layout/grid";
+
 .table_wrap {
   display: flex;
   flex-direction: column;
@@ -27,4 +29,11 @@
 }
 .fontColor {
   color: red;
+}
+@include pad(){
+.table_content{
+  width: 95%;
+  height: 500px;
+    overflow-x: auto; //自動產生 X 軸捲軸
+  }
 }
