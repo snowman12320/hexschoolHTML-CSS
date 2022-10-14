@@ -1,6 +1,6 @@
+@import "../utils/function";
 @import "../utils/mix";
 @import "../layout/grid";
-
 
 .triBox {
   display: flex;
@@ -30,11 +30,11 @@
 .tribox_jqlist {
   list-style: disc;
 }
-@include pad(){
-    .triBox{
-        flex-direction: column;
-    }
-    .img_content{
-        width: 90%;
-    }
+@include pad() {
+  .triBox {
+    flex-direction: column;
+  }
+  .img_content {
+    width: 90%;
+  }
 }

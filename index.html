@@ -14,7 +14,7 @@
   <body class="wrap">
     <ul class="share">
       <li><img id="top" src="./img/facebookIcon.png" alt="facebookIcon" /></li>
-      <li class="spanFace" >粉絲團｜</li>
+      <li class="spanFace">粉絲團｜</li>
       <li><img src="./img/twitterIcon.png" alt="twitterIcon" /></li>
       <li class="spanTwi">追隨我們</li>
     </ul>
@@ -22,25 +22,36 @@
       <a href="#"><img src="./img/logo.png" alt="logo" /></a>
       <div>
         <ul class="menu">
-          <li><a href="#" >首頁</a></li>
-          <li><a href="#productIntro">產品介紹</a> </li>
-          <li><a href="#callout">聯絡我們</a> </li>
+          <li><a href="#">首頁</a></li>
+          <li>
+            <a class="nav_dropdown" href="#productIntro">產品介紹</a>
+            <!-- JQ -->
+            <ul class="nav_dropdown_open">
+              <li><a href="">產品名稱</a></li>
+              <li><a href="">產品型號</a></li>
+              <li><a href="">產品圖片</a></li>
+            </ul>
+          </li>
+          <li><a href="#callout">聯絡我們</a></li>
         </ul>
       </div>
     </nav>
     <section class="banner">
       <div class="bannerBox"></div>
       <div class="bannerInfor">
-        <h1>六角學院<br> 讓你奠定良好的前端基礎</h1>
+        <h1>
+          六角學院<br />
+          讓你奠定良好的前端基礎
+        </h1>
       </div>
     </section>
     <ul class="triBox" id="productIntro">
       <li class="img_content">
         <div>
-            <img src="./img/html.png" alt="" />
+          <img src="./img/html.png" alt="" />
         </div>
         <div>
-        <h2>Html 5 基礎教學</h2>
+          <h2>Html 5 基礎教學</h2>
           <p>
             主流前端網站設計的基礎就在六角學 院,在這裡不在是填鴨式教學,而是透
             過實際的範例,瞭解正確的網站開發流 程,講師均具有業界開發經驗,讓學員
@@ -50,9 +61,9 @@
       </li>
       <li class="img_content">
         <div>
-            <img src="./img/rwd.png" alt="" />
+          <img src="./img/rwd.png" alt="" />
         </div>
-          <div>
+        <div>
           <h2>響應式網站設計</h2>
           <p>
             響應式網站設計Responsive web design),目前大多使用者均是以手機
@@ -63,9 +74,9 @@
       </li>
       <li class="img_content">
         <div>
-            <img src="./img/jQuery.png" alt="" />
+          <img src="./img/jQuery.png" alt="" />
         </div>
-          <div>  
+        <div>
           <h2>jQuery 實戰教學</h2>
           <ul>
             本課程有以下特色
@@ -125,24 +136,38 @@
       </table>
     </section>
     <section class="gradientBox">
-        <h2>對我們課程有興趣嗎? <br> 歡迎留下您的資料</h2>
-        <div>
-            <form class="message" action="index.html">
-                <textarea name="remark" id="textarea" cols="" rows=""></textarea>
-                <div class="messageInfor">
-                    <label for="name">姓名</label>
-                    <input type="text" name="name" id="name" placeholder="陳Ｏ良" />
-                    <label for="tel" >電話</label>
-                    <input type="tel" name="tel" id="tel" placeholder="09-xxxx-xxxx"  minlength="10"/>
-                    <label for="email">信箱</label>
-                    <input type="email" name="email" id="email" placeholder="xxx@gmail.com"/>
-                    <button type="submit" value="送出">送出</button>
-                </div>
-          </form>
-        </div>
+      <h2>
+        對我們課程有興趣嗎? <br />
+        歡迎留下您的資料
+      </h2>
+      <div>
+        <form class="message" action="index.html">
+          <textarea name="remark" id="textarea" cols="" rows=""></textarea>
+          <div class="messageInfor">
+            <label for="name">姓名</label>
+            <input type="text" name="name" id="name" placeholder="陳Ｏ良" />
+            <label for="tel">電話</label>
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="09-xxxx-xxxx"
+              minlength="10"
+            />
+            <label for="email">信箱</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="xxx@gmail.com"
+            />
+            <button type="submit" value="送出">送出</button>
+          </div>
+        </form>
+      </div>
     </section>
     <footer class="footer" id="callout">
-      <a href="#"><img src="./img/footerLogo.png" alt="footerLogo" /></a> 
+      <a href="#"><img src="./img/footerLogo.png" alt="footerLogo" /></a>
       <ul>
         <li>
           聯絡我們：<a href="mailto:hexschool@gmail.com">hexschool@gmail.com</a>
@@ -150,6 +175,12 @@
         <li>電話：<a href="tel:+0912345678">0912345678</a></li>
       </ul>
     </footer>
-    <button class="backAbove" ><a href="#top">︽</a></button>
+    <button class="backAbove"><a href="#top">︽</a></button>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript/all.js"></script>
   </body>
 </html>
