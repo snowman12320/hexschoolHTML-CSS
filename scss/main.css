@@ -175,22 +175,21 @@ a {
   border-bottom: #00cc99 4px solid;
   cursor: pointer;
 }
+.navbar .menu a:hover .nav_dropdown_open {
+  display: block;
+}
 
 .menu li:nth-child(2) {
   position: relative;
 }
-.menu li:nth-child(2) ul {
-  display: none;
-}
 
 .nav_dropdown_open {
-  position: absolute;
+  display: none;
   top: 51px;
   text-align: center;
   background-color: #fff;
   z-index: 10;
 }
-
 .nav_dropdown_open li a {
   padding: 16px;
   box-sizing: border-box;

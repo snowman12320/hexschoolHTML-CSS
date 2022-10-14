@@ -27,33 +27,33 @@
         border-bottom: #00cc99 4px solid;
         cursor: pointer;
       }
+      &:hover .nav_dropdown_open {
+        display: block;
+      }
     }
   }
 }
 
 .menu li:nth-child(2) {
   position: relative;
-  ul {
-    display: none;
-  }
+  // ul {
+  //   display: none;
+  // }
 }
 .nav_dropdown_open {
-  // display: none;
-  position: absolute;
+  display: none;
   top: 51px;
   text-align: center;
   background-color: #fff;
   z-index: 10;
   // 兩個class + 兩個標籤有22分
-}
-
-//這邊可以改變樣式 但用按鈕點擊出現後 CSS就吃到nav .menu a:hove
-.nav_dropdown_open li a {
-  padding: 16px;
-  box-sizing: border-box; //為何使用box-sizing: border-box; 後hover的底線還會多高度造成內文字移動???
-  height: 48px; //高度寫死就不會推到文字
-  &:hover {
-    border-bottom: #00cc99 4px solid;
-    cursor: pointer;
+  li a {
+    padding: 16px;
+    box-sizing: border-box; //為何使用box-sizing: border-box; 後hover的底線還會多高度造成內文字移動???
+    height: 48px; //高度寫死就不會推到文字
+    &:hover {
+      border-bottom: #00cc99 4px solid;
+      cursor: pointer;
+    }
   }
 }
