@@ -2,30 +2,30 @@
 @import "base/reset"; //統一
 @import "base/typography"; //排版規則
 //佈局
-@import "layout/navigation";//導覽
-@import "layout/header";//頁首
-@import "layout/sidebar";//側欄
-@import "layout/footer";//頁尾
-@import "layout/grid";//格線
+@import "layout/navigation"; //導覽
+@import "layout/header"; //頁首
+@import "layout/sidebar"; //側欄
+@import "layout/footer"; //頁尾
+@import "layout/grid"; //格線
 //組件
-@import "components/backborad";//背景
-@import "components/carousel";//輪播
-@import "components/banner";//封面
-@import "components/card";//卡片 
-@import "components/qa";//問答 
-@import "components/table";//表格
-@import "components/form";//表單
-@import "components/dropdown";//選單
-@import "components/button";//按鈕
+@import "components/backborad"; //背景
+@import "components/carousel"; //輪播
+@import "components/banner"; //封面
+@import "components/card"; //卡片
+@import "components/qa"; //問答
+@import "components/table"; //表格
+@import "components/form"; //表單
+@import "components/dropdown"; //選單
+@import "components/button"; //按鈕
 //通用
-@import "utils/variables";//變數
-@import "utils/function";//函數
-@import "utils/mix";//混用
+@import "utils/variables"; //變數
+@import "utils/function"; //函數
+@import "utils/mix"; //混用
 //引入樣式
-@import "vendors/bootstrap";//  (整個載下來貼上 要修改再去覆蓋夾修改
-@import "vendors/jquery_ui";//
-@import "vendors_extensions/bootstrap";//覆蓋樣式
-@import "vendors_extensions/bootstrap";//
+@import "vendors/bootstrap"; //  (整個載下來貼上 要修改再去覆蓋夾修改
+@import "vendors/jquery_ui"; //
+@import "vendors_extensions/bootstrap"; //覆蓋樣式
+@import "vendors_extensions/bootstrap"; //
 
 //分頁
 @import "pages/index"; //主頁
@@ -33,9 +33,5 @@
 @import "pages/login"; //
 @import "pages/cart"; //
 //主題
-@import "themes/admin";//管理
+@import "themes/admin"; //管理
 @import "themes/user"; //客戶
-
-
-
-
