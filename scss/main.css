@@ -180,10 +180,10 @@ a {
   border-bottom: #00cc99 4px solid;
 }
 .navbar .menu a.visited {
-  color: #gray;
-  opacity: 0.5;
+  color: gray;
 }
-.navbar .menu a:hover .nav_dropdown_open {
+
+.nav_dropdown:hover .nav_dropdown_open {
   display: block !important;
 }
 

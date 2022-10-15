@@ -3,10 +3,14 @@ $(document).ready(function () {
   $(".menu").on("click", "a", function () {
     $(this)
       .addClass("active")
+      //   父層的
       .parent()
+      //   同層的
       .siblings()
+      //   子層的
       .find("a")
       .removeClass("active");
+    //   關閉父層的 同層的 子層的
     $(this).parent().siblings().find(".nav_dropdown_open").slideUp();
   });
 
@@ -14,7 +18,7 @@ $(document).ready(function () {
   $(".nav_dropdown").click(function (e) {
     e.preventDefault();
     $(".nav_dropdown").toggleClass("active");
-    // 使用壓縮最大CDN會無法使用 使用第二大的
+    // 使用壓縮最大CDN會無法使用 使用第二大的CDN
     $(".nav_dropdown_open").slideToggle();
   });
 

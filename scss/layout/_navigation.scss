@@ -36,17 +36,16 @@
       }
       // 沒有激活過的樣式效果???
       &.visited {
-        color: #gray;
-        opacity: 0.5;
-      }
-      // 用JS寫可以
-      &:hover .nav_dropdown_open {
-        display: block !important;
+        color: gray;
       }
     }
   }
 }
 
+// 用JS寫可以 CSS無法???
+.nav_dropdown:hover .nav_dropdown_open {
+  display: block !important;
+}
 .menu li:nth-child(2) {
   position: relative !important;
 }
@@ -70,8 +69,4 @@
       cursor: pointer;
     }
   }
-}
-
-// 輪播可設定寬高
-.swiper {
 }
