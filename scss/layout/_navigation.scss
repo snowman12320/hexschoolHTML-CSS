@@ -12,6 +12,16 @@
     max-width: 250px;
     display: flex;
     justify-content: space-around;
+    li.active {
+      box-sizing: border-box;
+      border-bottom: #00cc99 4px solid;
+    }
+    li a:hover {
+      padding: 16px;
+      box-sizing: border-box;
+      border-bottom: #00cc99 4px solid;
+      cursor: pointer;
+    }
     // 這裡只有21分
     a {
       display: block;
@@ -20,40 +30,48 @@
       text-decoration: none;
       color: #9ce5cd;
       /* a標籤權重1分 藍色會被蓋掉 .menu a的10+1分顏色蓋 */
-      &:hover,
       &.active {
-        padding: 16px;
         box-sizing: border-box;
         border-bottom: #00cc99 4px solid;
-        cursor: pointer;
       }
+      // 沒有激活過的樣式效果???
+      &.visited {
+        color: #gray;
+        opacity: 0.5;
+      }
+      // 用JS寫可以
       &:hover .nav_dropdown_open {
-        display: block;
+        display: block !important;
       }
     }
   }
 }
 
 .menu li:nth-child(2) {
-  position: relative;
-  // ul {
-  //   display: none;
-  // }
+  position: relative !important;
 }
 .nav_dropdown_open {
+  // 沒有絕對定位就會吃到父層整塊排版向下移
+  // 要使用 !important 來避免父層同樣式覆蓋~~~
+  position: absolute !important;
   display: none;
   top: 51px;
   text-align: center;
   background-color: #fff;
-  z-index: 10;
+  z-index: 100;
   // 兩個class + 兩個標籤有22分
   li a {
-    padding: 16px;
+    padding: 16px !important;
     box-sizing: border-box; //為何使用box-sizing: border-box; 後hover的底線還會多高度造成內文字移動???
-    height: 48px; //高度寫死就不會推到文字
+    height: 48px !important; //高度寫死就不會推到文字
+    display: inline-block !important;
     &:hover {
       border-bottom: #00cc99 4px solid;
       cursor: pointer;
     }
   }
+}
+
+// 輪播可設定寬高
+.swiper {
 }

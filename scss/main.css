@@ -134,10 +134,6 @@ table {
   border-spacing: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 a {
   text-decoration: none;
 }
@@ -161,6 +157,16 @@ a {
   display: flex;
   justify-content: space-around;
 }
+.navbar .menu li.active {
+  box-sizing: border-box;
+  border-bottom: #00cc99 4px solid;
+}
+.navbar .menu li a:hover {
+  padding: 16px;
+  box-sizing: border-box;
+  border-bottom: #00cc99 4px solid;
+  cursor: pointer;
+}
 .navbar .menu a {
   display: block;
   height: auto;
@@ -169,31 +175,35 @@ a {
   color: #9ce5cd;
   /* a標籤權重1分 藍色會被蓋掉 .menu a的10+1分顏色蓋 */
 }
-.navbar .menu a:hover, .navbar .menu a.active {
-  padding: 16px;
+.navbar .menu a.active {
   box-sizing: border-box;
   border-bottom: #00cc99 4px solid;
-  cursor: pointer;
+}
+.navbar .menu a.visited {
+  color: #gray;
+  opacity: 0.5;
 }
 .navbar .menu a:hover .nav_dropdown_open {
-  display: block;
+  display: block !important;
 }
 
 .menu li:nth-child(2) {
-  position: relative;
+  position: relative !important;
 }
 
 .nav_dropdown_open {
+  position: absolute !important;
   display: none;
   top: 51px;
   text-align: center;
   background-color: #fff;
-  z-index: 10;
+  z-index: 100;
 }
 .nav_dropdown_open li a {
-  padding: 16px;
+  padding: 16px !important;
   box-sizing: border-box;
-  height: 48px;
+  height: 48px !important;
+  display: inline-block !important;
 }
 .nav_dropdown_open li a:hover {
   border-bottom: #00cc99 4px solid;
