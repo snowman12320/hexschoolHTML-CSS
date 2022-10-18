@@ -54,6 +54,7 @@ $(document).ready(function () {
   });
 
   // // 大燈箱
+  // 本身是a標籤 把卡片外框的樣式放到a標籤就可以整塊連結
   // $(".img_content").click(function () {
   //   $(".example-image-link").show();
   // });
