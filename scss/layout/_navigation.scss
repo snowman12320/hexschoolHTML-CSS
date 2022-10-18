@@ -36,17 +36,21 @@
       }
       // 沒有激活過的樣式效果???
       &.visited {
-        color: gray;
+        color: gainsboro;
       }
     }
   }
 }
 
 // 用JS寫可以 CSS無法???
-.nav_dropdown:hover .nav_dropdown_open {
-  display: block !important;
-}
-.menu li:nth-child(2) {
+// .nav_dropdown:hover~.nav_dropdown_open 使下拉選單出現，
+// 可以參考 30 個 CSS 選擇器 第九項
+// 不過這樣就無法去選取 .nav_dropdown_open 的選項(鼠標移開 .nav_dropdown 下拉式選單就會隱藏)。所以這邊建議還是用 JavaScript 進行。
+// .nav_dropdown:hover ~ .nav_dropdown_open {
+//   display: block !important;
+// }
+
+.menu > li:nth-child(2) {
   position: relative !important;
 }
 .nav_dropdown_open {

@@ -14,6 +14,11 @@ $(document).ready(function () {
     $(this).parent().siblings().find(".nav_dropdown_open").slideUp();
   });
 
+  // visited
+  $(".menu").on("click", "a", function () {
+    $(this).addClass("visited");
+  });
+
   // 下拉
   $(".nav_dropdown").click(function (e) {
     e.preventDefault();
@@ -26,12 +31,15 @@ $(document).ready(function () {
   const swiper = new Swiper(".swiper", {
     // Optional parameters
     direction: "horizontal",
-    loop: true,
     speed: 500,
-    //Autoplay Parameters
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    // 表單部分建議可以將其從 swiper 移出(自動輪播在填寫時會很不方便)，或是設置點擊停止自動輪播。
+    // e.g. JavaScript 取消 loop，改使用 autoplay
+    // loop: false, //迴圈取消 可能自動撥較適合
+    autoplay: {
+      delay: 2000,
+      // 填寫時暫停
+      disableOnInteraction: true,
+    },
 
     // If we need pagination
     pagination: {
@@ -45,9 +53,22 @@ $(document).ready(function () {
     },
   });
 
+  // // 大燈箱
+  // $(".img_content").click(function () {
+  //   $(".example-image-link").show();
+  // });
+
   //TOP
+  function showBtnCondition() {
+    if ($(this).scrollTop() > 300) {
+      $(".backAbove").fadeIn();
+    } else {
+      $(".backAbove").fadeOut();
+    }
+  }
+  $(window).scroll(showBtnCondition);
+
   $(".backAbove").click(function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: 0 }, 100);
+    $("html,body").animate({ scrollTop: 0 }, 500);
   });
 });

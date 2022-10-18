@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/scss/main.css" />
+    <!-- CSS 檔案的載入順序可以調整成先載入第三方套件，最後才是自己寫的 CSS。 -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -18,14 +18,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
     />
+    <link rel="stylesheet" href="/scss/main.css" />
   </head>
   <!-- https://docs.google.com/document/d/1XWeVvTTgKqYZMKnPF0ZfGInigE2-PDGOjQ0cmU8k938/edit# -->
   <body class="wrap">
+    <!-- share，粉絲團與追隨我們中間的 |，可以改使用 border 或是偽元素來實作。同時圖片和文字，可以放置在同個 li 標籤內。 -->
     <ul class="share">
-      <li><img id="top" src="./img/facebookIcon.png" alt="facebookIcon" /></li>
-      <li class="spanFace">粉絲團｜</li>
-      <li><img src="./img/twitterIcon.png" alt="twitterIcon" /></li>
-      <li class="spanTwi">追隨我們</li>
+      <li>
+        <img id="top" src="./img/facebookIcon.png" /><span class="spanFace"
+          >粉絲團</span
+        >
+      </li>
+      <li>
+        <img src="./img/twitterIcon.png" /><span class="spanTwi">追隨我們</span>
+      </li>
     </ul>
     <!-- 下拉 -->
     <nav class="navbar">
@@ -176,11 +182,6 @@
         </div>
         <div>
           <h2>Html 5 基礎教學 ...</h2>
-          <!-- <p>
-            主流前端網站設計的基礎就在六角學 院,在這裡不在是填鴨式教學,而是透
-            過實際的範例,瞭解正確的網站開發流 程,講師均具有業界開發經驗,讓學員
-            學習業界主流的開發方法。
-          </p> -->
         </div>
       </li>
       <li class="img_content">
@@ -195,11 +196,6 @@
         </div>
         <div>
           <h2>響應式網站設計 ...</h2>
-          <!-- <p>
-            響應式網站設計Responsive web design),目前大多使用者均是以手機
-            瀏覽的情況下,響應式網站已經是必備 的·六角學院將會提供業界響應式開發
-            方法,讓學生瞭解行動版開發巧。
-          </p> -->
         </div>
       </li>
       <li class="img_content">
@@ -209,19 +205,11 @@
             href="./img/bg_QA.png"
             data-lightbox="example-1"
             data-title="jQuery 實戰教學 - 本課程有以下特色1.瞭解變數的使用方法2.學習並操作DOM3.學習基本數學運算方法4.套件的操作及運用"
-            ><img class="example-image" src="./img/jQuery.png"
-          /></a>
-          <img src="" alt="" />
+            ><img class="example-image" src="./img/jQuery.png" />
+          </a>
         </div>
         <div>
           <h2>jQuery 實戰教學 ...</h2>
-          <!-- <ul>
-            本課程有以下特色
-            <li class="tribox_jqlist">瞭解變數的使用方法</li>
-            <li class="tribox_jqlist">學習並操作DOM</li>
-            <li class="tribox_jqlist">學習基本數學運算方法</li>
-            <li class="tribox_jqlist">套件的操作及運用</li>
-          </ul> -->
         </div>
       </li>
     </ul>
@@ -236,7 +224,13 @@
       </ul>
     </footer>
     <!-- TOP -->
-    <button class="backAbove"><a href="#top">︽</a></button>
+    <!-- 滾動到最上面的按鈕可以到一定高度或是底部再顯示 -->
+    <button class="backAbove">
+      <!-- <a href="#top"> -->
+      ︽
+      <!-- </a> -->
+    </button>
+
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="

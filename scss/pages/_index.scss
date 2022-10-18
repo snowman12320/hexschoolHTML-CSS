@@ -10,6 +10,14 @@
 .spanFace {
   color: $facebook;
 }
+.spanFace::after {
+  content: "";
+  display: inline-block;
+  background-color: #000;
+  height: 16px;
+  width: 1px;
+  margin: 0 5px;
+}
 .spanTwi {
   color: $twitter;
 }

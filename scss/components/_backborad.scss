@@ -23,6 +23,11 @@
   /* 用div以外包的標籤會無效果 */
   background-image: url(../../img/banner.png);
   background-repeat: no-repeat;
+  // 這邊在 .banner 設置 background-position: center; 以及 background-size: cover; 都有正常運作，
+  // 是不是這些樣式沒有寫在 background-image 下面？同時高度部分要調整 height。
+  background-position: right center;
+  background-size: cover;
+  height: 450px;
 }
 /* .bannerBox 設定的黑色背景可以移到 .banner 使用偽元素 ::after，這樣可以讓 html 結構更簡潔 */
 .banner::after {

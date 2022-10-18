@@ -180,14 +180,10 @@ a {
   border-bottom: #00cc99 4px solid;
 }
 .navbar .menu a.visited {
-  color: gray;
+  color: gainsboro;
 }
 
-.nav_dropdown:hover .nav_dropdown_open {
-  display: block !important;
-}
-
-.menu li:nth-child(2) {
+.menu > li:nth-child(2) {
   position: relative !important;
 }
 
@@ -252,6 +248,9 @@ a {
   /* 用div以外包的標籤會無效果 */
   background-image: url(../../img/banner.png);
   background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  height: 450px;
 }
 
 /* .bannerBox 設定的黑色背景可以移到 .banner 使用偽元素 ::after，這樣可以讓 html 結構更簡潔 */
@@ -418,11 +417,12 @@ textarea {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  color: white;
+  color: red;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
   border: none;
+  display: none;
 }
 
 .share {
@@ -434,6 +434,15 @@ textarea {
 
 .spanFace {
   color: #667aad;
+}
+
+.spanFace::after {
+  content: "";
+  display: inline-block;
+  background-color: #000;
+  height: 16px;
+  width: 1px;
+  margin: 0 5px;
 }
 
 .spanTwi {
